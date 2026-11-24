@@ -1,4 +1,52 @@
 (function () {
+  /* ---------- Language ---------- */
+  var I = window.MC_I18N, LS = 'mc-lang';
+  function pickLang() {
+    var saved = null;
+    try { saved = localStorage.getItem(LS); } catch (e) {}
+    if (saved && I.langs.indexOf(saved) > -1) return saved;
+    var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+    for (var i = 0; i < list.length; i++) {
+      var l = String(list[i]).toLowerCase();
+      if (l.indexOf('zh') === 0) return /hant|tw|hk|mo/.test(l) ? 'zh-Hant' : 'zh-Hans';
+      var base = l.split('-')[0];
+      if (['en', 'ja', 'ko', 'es', 'pt'].indexOf(base) > -1) return base;
+    }
+    return 'en';
+  }
+  function applyLang(lang) {
+    var n = I.langs.indexOf(lang); if (n < 0) { lang = 'en'; n = 0; }
+    var t = function (k) { var v = I.t[k]; return v ? (v[n] || v[0]) : null; };
+    document.documentElement.lang = I.htmlLang[lang];
+    document.querySelectorAll('[data-i18n]').forEach(function (el) { var v = t(el.getAttribute('data-i18n')); if (v != null) el.textContent = v; });
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) { var v = t(el.getAttribute('data-i18n-html')); if (v != null) el.innerHTML = v; });
+    // Show the other name next to the tagline when the local name differs from the English one
+    document.querySelectorAll('[data-alt]').forEach(function (el) {
+      var key = el.getAttribute('data-alt'), local = t('name.' + key), en = I.t['name.' + key][0];
+      el.textContent = local === en ? '' : (key === 'picki' ? local : en) + ' · ';
+    });
+    var time = document.querySelector('.site-footer time');
+    if (time && window.Intl) {
+      try { time.textContent = new Intl.DateTimeFormat(I.htmlLang[lang], { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(time.getAttribute('datetime') + 'T12:00:00')); } catch (e) {}
+    }
+    document.querySelectorAll('[data-carousel]').forEach(function (root) {
+      var caps = root.querySelectorAll('.slide figcaption strong');
+      root.querySelectorAll('.dots button').forEach(function (b, i) { if (caps[i]) b.setAttribute('aria-label', caps[i].textContent); });
+    });
+    document.querySelectorAll('[data-l10n-art]').forEach(function (img) {
+      img.src = img.getAttribute('data-l10n-art') + (lang === 'en' ? '' : '.' + lang) + '.svg';
+    });
+    var sel = document.getElementById('lang-select'); if (sel) sel.value = lang;
+  }
+  if (I) {
+    var sel = document.getElementById('lang-select');
+    if (sel) {
+      I.langs.forEach(function (l) { var o = document.createElement('option'); o.value = l; o.textContent = I.names[l]; sel.appendChild(o); });
+      sel.addEventListener('change', function () { try { localStorage.setItem(LS, sel.value); } catch (e) {} applyLang(sel.value); });
+    }
+    applyLang(pickLang());
+  }
+
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* Reveal sections as they scroll into view */
@@ -75,6 +123,16 @@
     } else { visible = true; start(); }
 
     if (reduce) root.classList.add('is-paused');
+    go(0);
+
+    // mode buttons elsewhere in the same section jump to a slide
+    var section = root.closest('section');
+    var modes = section ? section.querySelectorAll('[data-go]') : [];
+    modes.forEach(function (b) {
+      b.addEventListener('click', function () { go(+b.getAttribute('data-go')); restart(); });
+    });
+    var baseGo = go;
+    go = function (i) { baseGo(i); modes.forEach(function (b, k) { b.classList.toggle('is-active', k === index); }); };
     go(0);
   });
 })();
