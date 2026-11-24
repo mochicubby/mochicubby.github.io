@@ -103,38 +103,40 @@ figcaption strong{display:block;font-family:var(--round);font-weight:600;font-si
 .bunny-r{width:170px;right:4px;bottom:-6px}
 .bunny-l{width:160px;left:4px;bottom:-4px}
 
-/* Picki: wheel */
-.wheel-wrap{position:absolute;left:50%;top:50%;width:250px;height:250px;margin:-125px 0 0 -150px}
-.wheel{width:100%;height:100%;border-radius:50%;border:7px solid #FFFDF7;box-shadow:var(--shadow);position:relative;
-  background:conic-gradient(#EBD9B4 0 60deg,#9FCBC6 0 120deg,#BFD2AE 0 180deg,#E2C9A6 0 240deg,#EBC7CF 0 300deg,#C3D6E8 0)}
-.slide.is-active .wheel{animation:spin 3.6s cubic-bezier(.15,.7,.1,1) .2s both}
-.wheel span{position:absolute;left:50%;top:50%;font-family:var(--round);font-weight:500;font-size:13px;color:#4A3B33;transform-origin:0 0;white-space:nowrap}
-.wheel span:nth-child(1){transform:rotate(-60deg) translate(38px,-8px)}
-.wheel span:nth-child(2){transform:rotate(0deg) translate(38px,-8px)}
-.wheel span:nth-child(3){transform:rotate(60deg) translate(38px,-8px)}
-.wheel span:nth-child(4){transform:rotate(120deg) translate(38px,-8px)}
-.wheel span:nth-child(5){transform:rotate(180deg) translate(38px,-8px)}
-.wheel span:nth-child(6){transform:rotate(240deg) translate(38px,-8px)}
-.wheel-pin{position:absolute;left:50%;top:-14px;width:26px;height:32px;margin-left:-13px;background:var(--picki-accent);clip-path:polygon(50% 100%,0 0,100% 0)}
-@keyframes spin{from{transform:rotate(0)}to{transform:rotate(1110deg)}}
-
-/* Picki: darts */
-.board{position:absolute;left:50%;top:50%;width:230px;height:230px;margin:-115px 0 0 -80px;border-radius:50%;background:#EBC7CF;box-shadow:var(--shadow)}
-.board i{position:absolute;border-radius:50%;inset:var(--s)}
-.board i:nth-child(1){--s:22px;background:#FFFDF7}.board i:nth-child(2){--s:44px;background:#9FCBC6}.board i:nth-child(3){--s:68px;background:#FFFDF7}.board i:nth-child(4){--s:92px;background:#E5B54A}
-.dart{position:absolute;width:70px;height:6px;border-radius:3px;background:var(--picki-accent);transform-origin:0 50%;opacity:0}
-.dart::after{content:"";position:absolute;right:-6px;top:-6px;border:9px solid transparent;border-left:0;border-right:14px solid #E2C9A6}
-.d1{left:116px;top:112px;rotate:-35deg}.d2{left:150px;top:60px;rotate:-20deg}
-.slide.is-active .d1{animation:dart .5s cubic-bezier(.2,.8,.3,1.2) .3s forwards}
-.slide.is-active .d2{animation:dart .5s cubic-bezier(.2,.8,.3,1.2) .8s forwards}
-@keyframes dart{from{opacity:0;transform:translate(120px,-60px)}to{opacity:1;transform:none}}
-
-/* Picki: lucky box */
-.box-img{position:absolute;left:50%;bottom:24px;width:180px;margin-left:-90px;border-radius:40px;box-shadow:var(--shadow)}
-.slide.is-active .box-img{animation:shake .5s ease-in-out .2s 3}
-@keyframes shake{0%,100%{transform:rotate(0)}25%{transform:rotate(-6deg)}75%{transform:rotate(6deg)}}
-.ticket{position:absolute;font-family:var(--round);font-weight:600;font-size:15px;background:#FFF6E5;color:#6B4E2E;padding:8px 14px;border-radius:10px;border:2px dashed #E2C9A6}
-.t1{left:14%;top:30%;rotate:-8deg}.t2{right:12%;top:24%;rotate:7deg}.t3{right:20%;top:52%;rotate:-4deg}
+/* Picki: artwork follows the app's own drawing (DesignTokens) */
+.pl-wheel{position:absolute;left:50%;top:50%;width:250px;height:250px;margin:-125px 0 0 -160px;filter:drop-shadow(0 12px 18px rgba(56,73,63,.18))}
+.pl-wheel img{position:absolute;inset:0;width:100%;height:100%}
+.slide.is-active .pl-wheel-face{animation:spin 3.4s cubic-bezier(.12,.7,.08,1) .2s both}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(-1110deg)}}
+.pl-result{right:18px;top:18px;opacity:0;transform:scale(.6)}
+.slide.is-active .pl-result{animation:popIn .5s cubic-bezier(.3,1.5,.5,1) 3.4s forwards}
+.pl-board{position:absolute;left:50%;top:50%;width:240px;height:240px;margin:-120px 0 0 -70px}
+.pl-board-face{width:100%;height:100%;filter:drop-shadow(0 12px 18px rgba(56,73,63,.18))}
+.slide.is-active .pl-board-face{animation:turn 14s linear infinite}
+@keyframes turn{to{transform:rotate(360deg)}}
+.pl-dart{position:absolute;width:72px;transform-origin:1.6% 50%;opacity:0}
+.pl-dart.d1{left:118px;top:86px;rotate:76deg}
+.pl-dart.d2{left:150px;top:132px;rotate:104deg}
+.slide.is-active .pl-dart.d1{animation:dartIn .45s cubic-bezier(.2,.8,.3,1.15) .5s forwards}
+.slide.is-active .pl-dart.d2{animation:dartIn .45s cubic-bezier(.2,.8,.3,1.15) 1.3s forwards}
+@keyframes dartIn{from{opacity:0;translate:0 0;transform:translateX(170px) scale(1.4)}to{opacity:1;transform:none}}
+.pl-box{position:absolute;left:50%;bottom:22px;width:230px;margin-left:-160px}
+.pl-box-art{position:relative;display:block;width:100%}
+.slide.is-active .pl-box-art{animation:shake .4s ease-in-out .2s 3}
+@keyframes shake{0%,100%{transform:rotate(0)}25%{transform:rotate(-1.6deg)}75%{transform:rotate(1.6deg)}}
+.pl-ticket{position:absolute;left:62px;top:-6px;width:116px;height:72px;display:grid;place-items:center;background:#FDE8D0;border:1px solid rgba(56,73,63,.35);border-radius:8px;font-family:var(--round);font-weight:500;font-size:18px;color:#38493F;opacity:0}
+.slide.is-active .pl-ticket{animation:ticket .9s cubic-bezier(.3,1.3,.5,1) 1.5s forwards}
+@keyframes ticket{from{opacity:0;transform:translateY(40px) scale(.3)}to{opacity:1;transform:translateY(-86px) rotate(-4deg)}}
+.pl-quick{position:absolute;inset:0}
+.pl-coin{position:absolute;left:50%;top:50%;width:150px;margin:-90px 0 0 -170px}
+.slide.is-active .pl-coin{animation:coinToss 1.3s cubic-bezier(.3,.6,.4,1) .2s both}
+@keyframes coinToss{0%{transform:translateY(0) rotateX(0)}45%{transform:translateY(-70px) rotateX(900deg)}100%{transform:translateY(0) rotateX(1800deg)}}
+.pl-die{position:absolute;width:84px}
+.pl-die.a{left:50%;top:50%;margin:-70px 0 0 20px;rotate:-8deg}
+.pl-die.b{left:50%;top:50%;margin:0 0 0 70px;rotate:12deg}
+.slide.is-active .pl-die{animation:roll .9s cubic-bezier(.2,.8,.3,1.1) .5s both}
+.slide.is-active .pl-die.b{animation-delay:.7s}
+@keyframes roll{from{opacity:0;transform:translate(160px,-40px) rotate(260deg)}to{opacity:1;transform:none}}
 
 /* Picki: weights */
 .weights{position:absolute;left:20px;right:150px;top:50%;transform:translateY(-50%);display:grid;gap:14px}
@@ -143,16 +145,6 @@ figcaption strong{display:block;font-family:var(--round);font-weight:600;font-si
 .weights em{font-style:normal;font-size:14px;color:var(--picki-accent)}
 .slide.is-active .weights b{animation:grow 1s ease .3s both}
 @keyframes grow{from{background-size:0 100%,auto}}
-
-/* Picki: quick */
-.quick{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:18px}
-.q{width:110px;height:130px;border-radius:24px;background:var(--paper);box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:44px;font-family:var(--round);font-weight:600;color:var(--picki-ink)}
-.q small{font-size:14px;font-weight:500;color:var(--muted);margin-top:4px}
-.slide.is-active .coin{animation:flip 1s ease .2s}
-.slide.is-active .dice{animation:roll .9s ease .5s}
-.slide.is-active .num{animation:popIn .6s cubic-bezier(.3,1.4,.5,1) .8s both;opacity:0;transform:scale(.8)}
-@keyframes flip{50%{transform:rotateY(180deg) translateY(-14px)}}
-@keyframes roll{50%{transform:rotate(200deg) scale(.9)}}
 
 /* Picki: finger pick */
 .fingers{position:absolute;inset:0}
@@ -228,13 +220,13 @@ figcaption strong{display:block;font-family:var(--round);font-weight:600;font-si
   .carousel{padding:12px 12px 10px;border-radius:28px}
   .slides{height:420px}
   .stage{height:300px}
-  .wheel-wrap{width:210px;height:210px;margin:-105px 0 0 -130px}
-  .wheel span{font-size:11px}
+  .pl-wheel{width:210px;height:210px;margin:-105px 0 0 -130px}
+  .pl-board{width:200px;height:200px;margin:-100px 0 0 -60px}
+  .pl-box{width:200px;margin-left:-130px}
+  .pl-coin{width:124px;margin:-80px 0 0 -140px}
+  .pl-die{width:70px}
   .fufu-r{width:130px}.fufu-r.small{width:110px}.fufu-l{width:110px}
   .bunny-r,.bunny-l{width:130px}
-  .board{width:190px;height:190px;margin:-95px 0 0 -60px}
-  .q{width:92px;height:112px;font-size:36px}
-  .quick{gap:10px}
   .weights{right:110px;left:12px}
   .weights div{grid-template-columns:52px 1fr 24px;font-size:14px;padding:8px 10px}
   .tk-card.center{left:12px;width:240px}
@@ -242,6 +234,6 @@ figcaption strong{display:block;font-family:var(--round);font-weight:600;font-si
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .slide .pop,.dart,.slide.is-active .num,.slide.is-active .check i.on,.slide.is-active .week i{opacity:1;transform:none}
+  .slide .pop,.pl-dart,.pl-ticket,.pl-result,.slide.is-active .num,.slide.is-active .check i.on,.slide.is-active .week i{opacity:1;transform:none}
   html{scroll-behavior:auto}
 }
