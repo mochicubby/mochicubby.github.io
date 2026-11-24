@@ -127,6 +127,25 @@ figcaption strong{display:block;font-family:var(--round);font-weight:600;font-si
 .pl-ticket{position:absolute;left:62px;top:-6px;width:116px;height:72px;display:grid;place-items:center;background:#FDE8D0;border:1px solid rgba(56,73,63,.35);border-radius:8px;font-family:var(--round);font-weight:500;font-size:18px;color:#38493F;opacity:0}
 .slide.is-active .pl-ticket{animation:ticket .9s cubic-bezier(.3,1.3,.5,1) 1.5s forwards}
 @keyframes ticket{from{opacity:0;transform:translateY(40px) scale(.3)}to{opacity:1;transform:translateY(-86px) rotate(-4deg)}}
+.pl-drum{position:absolute;left:50%;bottom:6px;width:270px;aspect-ratio:350/364;margin-left:-175px}
+.pl-drum img{position:absolute}
+.pl-drum-stand{inset:0;width:100%;height:100%}
+.pl-drum-back,.pl-drum-front{width:85.714%;left:7.143%;top:-1.07%}
+.pl-drum-back{translate:2.86% 2.47%}
+.slide.is-active .pl-drum-back,.slide.is-active .pl-drum-front{animation:crank 2.4s cubic-bezier(.35,.1,.25,1) .3s both}
+@keyframes crank{from{transform:rotate(0)}to{transform:rotate(720deg)}}
+.pl-ball{width:7.4%;left:20.6%;top:79%;opacity:0}
+.slide.is-active .pl-ball{animation:ballOut .9s cubic-bezier(.3,1.2,.5,1) 2.5s forwards}
+@keyframes ballOut{0%{opacity:0;transform:translate(60px,-30px)}40%{opacity:1}100%{opacity:1;transform:none}}
+.pl-number{position:absolute;left:50%;top:50%;width:250px;margin:-90px 0 0 -90px;filter:drop-shadow(0 10px 16px rgba(56,73,63,.12))}
+.pl-number img{display:block;width:100%}
+.pl-digits{position:absolute;left:0;right:0;top:27%;height:56px;overflow:hidden;-webkit-mask:linear-gradient(transparent,#000 25%,#000 75%,transparent);mask:linear-gradient(transparent,#000 25%,#000 75%,transparent)}
+.pl-strip{display:flex;flex-direction:column;transform:translateY(-448px)}
+.pl-strip span{height:56px;line-height:56px;text-align:center;font-family:var(--round);font-weight:500;font-size:50px;color:#4E6D57;font-variant-numeric:tabular-nums}
+.slide.is-active .pl-strip{animation:numRoll 1.8s cubic-bezier(.2,.7,.2,1) .4s both}
+@keyframes numRoll{from{transform:translateY(0)}to{transform:translateY(-448px)}}
+.c-tr{right:16px;top:18px}
+@keyframes numRollM{from{transform:translateY(0)}to{transform:translateY(-384px)}}
 .pl-quick{position:absolute;inset:0}
 .pl-coin{position:absolute;left:50%;top:50%;width:150px;margin:-90px 0 0 -170px}
 .slide.is-active .pl-coin{animation:coinToss 1.3s cubic-bezier(.3,.6,.4,1) .2s both}
@@ -225,6 +244,12 @@ figcaption strong{display:block;font-family:var(--round);font-weight:600;font-si
   .pl-box{width:200px;margin-left:-130px}
   .pl-coin{width:124px;margin:-80px 0 0 -140px}
   .pl-die{width:70px}
+  .pl-drum{width:230px;margin-left:-150px}
+  .pl-number{width:210px;margin-left:-70px}
+  .pl-digits{height:48px}
+  .pl-strip span{height:48px;line-height:48px;font-size:42px}
+  .pl-strip{transform:translateY(-384px)}
+  .slide.is-active .pl-strip{animation-name:numRollM}
   .fufu-r{width:130px}.fufu-r.small{width:110px}.fufu-l{width:110px}
   .bunny-r,.bunny-l{width:130px}
   .weights{right:110px;left:12px}
