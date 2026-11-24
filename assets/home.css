@@ -177,12 +177,12 @@ figcaption strong{display:block;font-family:var(--round);font-weight:600;font-si
 .pl-drum-stand{left:0;top:0;width:350px;height:364px}
 .pl-drum-back,.pl-drum-front{width:300px;height:300px;left:25px;top:-4px;transform-origin:150px 150px}
 .pl-drum-back{left:35px;top:5px}
-.slide.is-active .pl-drum-back,.slide.is-active .pl-drum-front{animation:crank 2.4s cubic-bezier(.35,.1,.25,1) .3s both}
-@keyframes crank{from{transform:rotate(0)}to{transform:rotate(720deg)}}
-/* ball pops out of the outlet on top, rolls round the left side and lands in the tray */
-.pl-ball{left:0;top:0;width:26px;height:30px;opacity:0;offset-path:path("M175 34 C175 -6 110 -34 58 6 C14 40 6 150 26 220 C38 262 58 290 85 300");offset-anchor:13px 13px;offset-rotate:0deg;offset-distance:100%}
-.slide.is-active .pl-ball{animation:ballOut 1.5s cubic-bezier(.45,.05,.55,.95) 2.65s both}
-@keyframes ballOut{0%{offset-distance:0%;opacity:0;scale:.5}8%{opacity:1;scale:1}100%{offset-distance:100%;opacity:1;scale:1}}
+.slide.is-active .pl-drum-back,.slide.is-active .pl-drum-front{animation:crank 2.6s cubic-bezier(.35,.1,.25,1) .2s both}
+/* like the app: the drum stops with its outlet at the lower left, and the ball drops out of it into the tray */
+@keyframes crank{from{transform:rotate(0)}to{transform:rotate(960deg)}}
+.pl-ball{left:0;top:0;width:26px;height:30px;opacity:0;offset-path:path("M80 203 C80 230 84 262 85 300");offset-anchor:13px 13px;offset-rotate:0deg;offset-distance:100%}
+.slide.is-active .pl-ball{animation:ballOut .55s cubic-bezier(.5,0,.8,.6) 2.75s both}
+@keyframes ballOut{0%{offset-distance:0%;opacity:0;scale:.6}15%{opacity:1;scale:1}100%{offset-distance:100%;opacity:1;scale:1}}
 .pl-number{position:absolute;left:50%;top:50%;width:260px;margin:-92px 0 0 -100px;filter:drop-shadow(0 10px 16px rgba(56,73,63,.12))}
 .pl-number img{display:block;width:100%}
 .pl-digits{position:absolute;left:0;right:0;top:31.5%;height:56px;overflow:hidden;-webkit-mask:linear-gradient(transparent,#000 25%,#000 75%,transparent);mask:linear-gradient(transparent,#000 25%,#000 75%,transparent)}
@@ -257,7 +257,7 @@ figcaption strong{display:block;font-family:var(--round);font-weight:600;font-si
 @media (prefers-color-scheme:dark){.ring{--c:#9094F2;--t:#3A3958}.bar{background:#3A3220}.week i{background:#43233A}}
 
 /* ---------- About ---------- */
-.about{position:relative;background:var(--bg);border-radius:48px 48px 0 0;margin-top:-48px;padding:96px 16px 72px}
+.about{position:relative;background:var(--paper);border-radius:48px 48px 0 0;margin-top:-48px;padding:88px 16px 120px;box-shadow:0 -20px 40px -30px rgba(80,60,40,.35)}
 .about-top{display:flex;gap:44px;align-items:center;justify-content:center;max-width:1000px;margin:0 auto}
 .about-copy{max-width:580px}
 .cubby{flex:none;width:250px;padding:26px 18px 0;border-radius:125px 125px 28px 28px;background:linear-gradient(#F3E4CF,#E9D3B6);box-shadow:inset 0 -14px 0 #DDBF9A,var(--shadow);line-height:0;overflow:hidden}
@@ -266,7 +266,7 @@ figcaption strong{display:block;font-family:var(--round);font-weight:600;font-si
 .about h2{font-family:var(--round);font-weight:600;font-size:34px;margin:0 0 10px}
 .about p{margin:0 0 12px;color:var(--muted);font-size:18px}
 .values{list-style:none;padding:0;margin:56px auto 0;max-width:1000px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.values li{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:22px 22px 20px;box-shadow:var(--shadow);color:var(--muted);font-size:15px;line-height:1.55}
+.values li{background:var(--bg);border:1px solid var(--line);border-radius:26px;padding:22px 22px 20px;box-shadow:var(--shadow);color:var(--muted);font-size:15px;line-height:1.55}
 .values b{display:block;font-family:var(--round);font-weight:600;font-size:19px;color:var(--ink);margin:10px 0 4px}
 .v-ic{display:grid;place-items:center;width:46px;height:46px;border-radius:15px;background:#F3E4CF;font-size:24px}
 .values li:nth-child(2) .v-ic{background:#E3ECDD}.values li:nth-child(3) .v-ic{background:#E9E8FA}
