@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ThingKeep Privacy</title><link rel="stylesheet" href="/style.css">
+<link rel="alternate" hreflang="zh-Hant" href="/thing-keep/privacy">
+<style>.note{background:#fff1c2;color:#4d3b00;border-radius:6px;padding:2px 6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}</style></head>
+<body><main>
+<p class="muted"><a href="/thing-keep/privacy" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></p>
+<h1>Privacy Policy</h1>
+<p class="muted">Effective date: <span class="note">To be decided: release date</span></p>
+<p>This Privacy Policy describes how Mochi Cubby ("we", "us" or "our") handles information in connection with the ThingKeep (小事記得) mobile application, including its widgets (the "App"). By using the App, you acknowledge the practices described in this Policy. This Policy is provided in Traditional Chinese and English; if the two versions differ, the Traditional Chinese version prevails.</p>
+
+<h2>1. Information Stored on Your Device</h2>
+<p>Content you create in the App, including items, item types, names, dates, amounts, checklists, icons and colors, records, notes and reminder settings, is stored locally on your device, together with your App settings such as appearance and quiet hours. Widgets display a summary that the App writes on the same device. Reminders are notifications scheduled locally on your device. We do not operate user accounts, and we do not receive, access or store this content, except as described in Section 4. Backups of your device, such as iCloud Backup or computer backups, may include this content and are handled by you and Apple under the settings of those services.</p>
+
+<h2>2. iCloud Sync</h2>
+<p>iCloud sync is available to all users and can be turned on or off at any time in the App. When it is on, the App uses Apple's CloudKit service to store your content in the private database of your iCloud account, so that you can restore it after reinstalling the App and keep it in sync across devices signed in to the same Apple Account. To notify your other devices of changes, Apple delivers sync notifications that do not contain your content.</p>
+<p>Content in your private iCloud database is stored in your own iCloud storage and is processed by Apple in accordance with the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>. We cannot access, modify or export it. You may delete it at any time by choosing "Delete iCloud data" in the App, or by deleting the App's data from your iCloud storage in the Settings app on your device. Either way, the content on your device is kept, and items you started sharing stop being shared.</p>
+
+<h2>3. Sharing</h2>
+<p><span class="note">To be decided: this feature is in development; this Section will be confirmed against the released version.</span></p>
+<p>If you subscribe to ThingKeep Pro, you may share an individual item with other people through Apple's CloudKit service. When an item is shared:</p>
+<ul>
+<li>all members can view and edit the item, its records and its notes, and the shared content is stored in the iCloud storage of the member who started sharing;</li>
+<li>members can see the name associated with each other's Apple Account (the full name in the member list and the first character as an avatar) and which member added each record. The App itself does not show members your email address or phone number; participant details shown in Apple's sharing screens are determined by Apple under its policies;</li>
+<li>anyone who has the invitation link can open it and join as a member, so a forwarded link lets other people join. Share the link only with people you intend to invite; the member who started sharing can see every member and remove anyone;</li>
+<li>each member's reminder settings remain in that member's own data and are not shared; and</li>
+<li>the member who started sharing may remove members or stop sharing, and any other member may leave, at any time. Afterwards, the item is removed from the devices of the other members; however, content that members have already seen, or a copy that a member keeps using a feature of the App when sharing stops, cannot be withdrawn.</li>
+</ul>
+
+<h2>4. Voice Input</h2>
+<p><span class="note">To be decided: this feature is in development; this Section will be confirmed against the released version.</span></p>
+<p>Voice input is a ThingKeep Pro feature that lets you add an item by speaking a sentence.</p>
+<p><strong>4.1 Speech recognition.</strong> Speech is converted to text on your device using Apple's on-device speech recognition. Audio is not sent from your device and is not stored. Voice input requires your permission to use the microphone and speech recognition.</p>
+<p><strong>4.2 Information sent for parsing.</strong> To turn the sentence into a draft item, the App sends the following to our parsing server: the recognized sentence (up to 200 characters); today's date; your time zone; the first day of your week; the App's language; your default currency; the signed transaction of your ThingKeep Pro subscription; and an App Attest key identifier and assertion. The App does not send your notes, your other items, your name, your email address or your Apple Account. The subscription transaction is signed by Apple and contains details such as the product, purchase and expiry dates, transaction identifiers and the App Store country or region; the server uses them only to verify your subscription and keeps none of them other than the original transaction identifier described in Section 4.4.</p>
+<p><strong>4.3 How it is processed.</strong> Our server verifies, using Apple's App Attest service, that the request comes from a genuine copy of the App, verifies your subscription, and sends the sentence and the date, time zone, week, language and currency information to Anthropic's Claude model, which returns a draft. The draft is shown in the App for you to review; nothing is saved until you confirm it. If the server cannot be reached, does not respond in time or your monthly limit has been reached, the App uses Apple's on-device model instead where your device supports it, and the sentence does not leave your device.</p>
+<p><strong>4.4 Information we retain.</strong> We do not log or store the sentences you speak, your subscription transaction or the verification data. We retain only:</p>
+<ul>
+<li>the original transaction identifier of your Pro subscription, together with the number of cloud parses used in the current month, to enforce the monthly limit of 1,000 parses per subscription. It is not stored with your sentences, and we cannot identify you from it; and</li>
+<li>the identifier, public key and usage counter of the App Attest key generated for the App on your device, to verify later requests; and</li>
+<li>a short technical log of each request (the request path, the result and any error code), used to operate the service and fix problems, which does not contain your sentence, subscription transaction or keys.</li>
+</ul>
+<p><strong>4.5 Service providers.</strong> Our parsing server runs on Cloudflare, which processes network information such as your IP address in order to deliver requests and protect the service from abuse. We have turned off Cloudflare's detailed request logs for this server. Anthropic processes the sentence and related information as our service provider under its commercial terms, does not use it to train its models, and deletes it within 30 days, except where retention is needed to enforce its usage policies or to comply with law.</p>
+
+<h2>5. Information We Do Not Collect</h2>
+<p>The App does not display advertising, does not track you across apps or websites owned by other companies, and does not use the advertising identifier (IDFA); it therefore does not request tracking permission. The App does not include third-party analytics, advertising or crash reporting tools. We do not send the names, checklist contents, amounts, notes or other text you enter to any analytics service, and we do not write them to logs. We do not sell, rent or trade information.</p>
+<p>If you have chosen to share analytics with app developers in the Settings app on your device, Apple may provide us with crash reports and performance data that do not identify you. You can change this choice under Settings &gt; Privacy &amp; Security &gt; Analytics &amp; Improvements.</p>
+
+<h2>6. In-App Purchases</h2>
+<p>ThingKeep Pro is offered as a monthly or yearly auto-renewable subscription. Purchases, subscription renewals, cancellations and refunds are processed by Apple through the App Store, in accordance with the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>. We do not receive or store your payment information, such as card details. The App checks your subscription status with Apple on your device. Your subscription transaction is sent to our server only when you use voice input, as described in Section 4.</p>
+
+<h2>7. How We Use Information</h2>
+<p>Information described in Section 4 is used only to provide voice input, to verify your subscription, to enforce the monthly limit, and to protect the service from fraud and abuse. We do not use it for advertising, profiling or marketing.</p>
+
+<h2>8. Retention and Deletion</h2>
+<ul>
+<li>Content on your device is deleted when you delete it in the App or delete the App. The App Attest key identifier used for voice input is stored in your device's keychain and, by design of iOS, may remain on your device after the App is deleted.</li>
+<li>Content in iCloud can be deleted as described in Section 2.</li>
+<li>Sentences sent for parsing are not retained by us; Anthropic retains them as described in Section 4.5.</li>
+<li>The subscription identifier, monthly count and App Attest key information are retained for as long as they are needed to provide voice input, or until you ask us to delete them. <span class="note">To be decided: whether records unused for a set period are deleted automatically, and after how long.</span></li>
+</ul>
+
+<h2>9. Your Rights</h2>
+<p>Depending on where you live, you may have the right to request access to, a copy of, correction of or deletion of your personal information, to object to or restrict its processing, and to lodge a complaint with a data protection authority. Because we do not operate user accounts, we may need you to provide information that allows us to locate the relevant records. To make a request, please contact us using the details in Section 13. Users in Taiwan may also refer to the notice in Section 9 of the Traditional Chinese version of this Policy, provided under the Personal Data Protection Act.</p>
+
+<h2>10. Data Security and International Transfers</h2>
+<p>Communications between the App and our server are encrypted in transit. The credentials used to access Anthropic's service are stored only in the server's encrypted configuration and are not included in the App. We take reasonable measures to protect information, but no method of transmission or storage is completely secure. Our service providers may process information in countries other than your own, including the United States.</p>
+
+<h2>11. Children's Privacy</h2>
+<p>The App is not directed to children under 13, and we do not knowingly collect personal information from them. If you believe a child has provided personal information, please contact us.</p>
+
+<h2>12. Changes to This Policy</h2>
+<p>We may update this Policy from time to time. Changes will be posted on this page with a revised effective date. Where changes are material, we will provide additional notice in the App or on this page.</p>
+
+<h2>13. Contact Us</h2>
+<p>If you have any questions about this Policy or wish to exercise your rights, please contact us at <a href="mailto:mochicubby.support@gmail.com">mochicubby.support@gmail.com</a>.</p>
+<p class="muted"><a href="/thing-keep/en/terms">Terms of Use</a></p>
+</main></body></html>
