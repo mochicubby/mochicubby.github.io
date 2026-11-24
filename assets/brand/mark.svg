@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Mochi Cubby">
+  <defs>
+    <radialGradient id="mc-mochi" cx="42%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".6" stop-color="#FFF8F0"/>
+      <stop offset="1" stop-color="#F1E4D6"/>
+    </radialGradient>
+    <linearGradient id="mc-nook" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E3C9A8"/>
+      <stop offset="1" stop-color="#EBD7BE"/>
+    </linearGradient>
+  </defs>
+  <!-- cubby -->
+  <path d="M20 112a100 100 0 0 1 200 0v96a24 24 0 0 1-24 24H44a24 24 0 0 1-24-24z" fill="#F4E6D3"/>
+  <path d="M40 116a80 80 0 0 1 160 0v92H40z" fill="url(#mc-nook)"/>
+  <rect x="30" y="204" width="180" height="16" rx="8" fill="#DDBF9A"/>
+  <!-- sprout -->
+  <path d="M120 108c0-10 2-18 6-24" stroke="#7FA37F" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M125 86c4-12 18-16 26-12-3 10-15 16-26 12z" fill="#9CC198"/>
+  <path d="M121 92c-5-10-17-13-24-8 4 9 15 12 24 8z" fill="#B5D3AE"/>
+  <!-- shadow -->
+  <ellipse cx="120" cy="206" rx="70" ry="7" fill="#C9A47A" opacity=".45"/>
+  <!-- mochi -->
+  <path d="M46 186c0-48 32-80 74-80s74 32 74 80c0 14-8 20-22 21-17 1-35 1-52 1s-35 0-52-1c-14-1-22-7-22-21z" fill="url(#mc-mochi)"/>
+  <path d="M70 132c9-12 23-18 37-19" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" fill="none" opacity=".9"/>
+  <!-- face -->
+  <ellipse cx="81" cy="173" rx="13" ry="8" fill="#F5AFAB" opacity=".75"/>
+  <ellipse cx="159" cy="173" rx="13" ry="8" fill="#F5AFAB" opacity=".75"/>
+  <circle cx="96" cy="160" r="6.5" fill="#4A3B33"/>
+  <circle cx="144" cy="160" r="6.5" fill="#4A3B33"/>
+  <circle cx="98" cy="157.5" r="2" fill="#FFFFFF"/>
+  <circle cx="146" cy="157.5" r="2" fill="#FFFFFF"/>
+  <path d="M111 170q4.5 5 9 0q4.5 5 9 0" stroke="#4A3B33" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
