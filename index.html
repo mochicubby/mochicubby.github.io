@@ -1,10 +1,254 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mochi Cubby</title><link rel="stylesheet" href="/style.css"></head>
-<body><main>
-<h1>Mochi Cubby</h1>
-<p>Small, gentle apps for everyday moments.</p>
-<h2>Apps</h2>
-<p><strong>Picki Land</strong><br>A little island that helps you decide.<br>
-<a href="/picki-land/privacy">Privacy Policy</a> · <a href="/picki-land/terms">Terms of Use</a> · <a href="/picki-land/support">Support</a></p>
-</main></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mochi Cubby</title>
+<meta name="description" content="Mochi Cubby is a cozy corner of soft, squishy creatures making small, comfortable apps for everyday life.">
+<link rel="icon" type="image/png" href="/assets/brand/favicon.png">
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+<meta property="og:title" content="Mochi Cubby">
+<meta property="og:description" content="Small, comfortable apps from a cozy corner of soft, squishy creatures.">
+<meta property="og:image" content="https://mochicubby.github.io/assets/brand/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/home.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body id="top">
+
+<!-- ========== Hero ========== -->
+<header class="hero">
+  <div class="puffs" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <h1 class="hero-logo reveal"><img src="/assets/brand/logo.png" alt="Mochi Cubby" width="900" height="591"></h1>
+  <p class="tagline reveal" style="--d:.15s" data-i18n-html="hero.tagline">A cozy corner of soft, squishy creatures,<br>making small apps that feel comfy to use.</p>
+  <nav class="hero-apps reveal" style="--d:.3s" aria-label="Apps">
+    <a class="hero-app is-picki" href="#picki-land"><img src="/assets/apps/picki-land/icon.png" alt="" width="44" height="44"><span><b data-i18n="name.picki">Picki Land</b><small data-i18n="picki.tag">Decision helper</small></span></a>
+    <a class="hero-app is-thing" href="#thingkeep"><img src="/assets/apps/thing-keep/bunny-wave.png" alt="" width="44" height="44"><span><b data-i18n="name.thing">ThingKeep</b><small data-i18n="thing.soon">Coming soon</small></span></a>
+  </nav>
+  <a class="scroll-cue reveal" style="--d:.45s" href="#picki-land" data-i18n="hero.cta">Meet our apps</a>
+</header>
+
+<main>
+
+<!-- ========== About ========== -->
+<section id="about" class="about">
+  <div class="about-top">
+    <div class="cubby reveal"><img src="/assets/brand/mascot.png" alt="" width="200" height="177"></div>
+    <div class="about-copy">
+      <h2 class="reveal" data-i18n="about.title">About Mochi Cubby</h2>
+      <p class="reveal" style="--d:.1s" data-i18n="about.p1">Mochi Cubby is a cozy little corner built by soft, squishy creatures. We make small, handy apps for everyday life, each with an interface that feels as comfortable as sinking into a warm cushion.</p>
+      <p class="reveal" style="--d:.2s" data-i18n="about.p2">We hope every tap feels gentle, every screen feels calm, and every app makes your day a little easier.</p>
+    </div>
+  </div>
+  <ul class="values">
+    <li class="reveal"><span class="v-ic">☁️</span><b data-i18n="v1.t">Soft and friendly</b><span data-i18n="v1.d">Rounded, gentle designs with little friends to keep you company.</span></li>
+    <li class="reveal" style="--d:.1s"><span class="v-ic">👆</span><b data-i18n="v2.t">Simple to use</b><span data-i18n="v2.d">Get it done in a few taps, with no extra steps.</span></li>
+    <li class="reveal" style="--d:.2s"><span class="v-ic">🔒</span><b data-i18n="v3.t">Your data stays yours</b><span data-i18n="v3.d">What you create stays on your device or in your own iCloud.</span></li>
+  </ul>
+</section>
+
+<!-- ========== Picki Land ========== -->
+<section id="picki-land" class="app app-picki">
+  <div class="deco" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="app-inner">
+    <div class="app-copy">
+      <div class="app-head reveal">
+        <img class="app-icon" src="/assets/apps/picki-land/icon.png" alt="Picki Land app icon" width="72" height="72">
+        <div>
+          <h2><img class="app-wordmark" src="/assets/apps/picki-land/wordmark.png" alt="Picki Land" width="405" height="88"></h2>
+          <p class="app-sub"><span class="alt-name" data-alt="picki"></span><span data-i18n="picki.tag">Decision helper</span></p>
+        </div>
+      </div>
+      <p class="app-lede reveal" data-i18n="picki.lede" style="--d:.1s">Can't decide what to eat, who goes first, or which movie to watch? Hand it to Fufu, the little cloud on Picki Land, and let the island choose for you.</p>
+      <ul class="feats reveal" style="--d:.15s"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3.2 3L15 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="picki.f1">8 playful ways to pick: wheel, darts, lottery box, drum and more</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3.2 3L15 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="picki.f2">Weighted odds, no-repeat draws and draw history</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3.2 3L15 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="picki.f3">Home Screen widgets, plus iCloud sync with PRO</span></li></ul>
+      <div class="app-actions reveal" style="--d:.2s">
+        <a class="store-btn" href="https://apps.apple.com/app/id6828918236" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 4.9c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg>
+          <span><small data-i18n="store.small">Download on the</small>App Store</span>
+        </a>
+        <a class="text-link" href="/picki-land/support" data-i18n="link.support">Support</a>
+        <a class="text-link" href="/picki-land/privacy" data-i18n="link.privacy">Privacy</a>
+        <a class="text-link" href="/picki-land/terms" data-i18n="link.terms">Terms</a>
+      </div>
+      <div class="modes reveal" style="--d:.25s"><button type="button" data-go="0"><img src="/assets/apps/picki-land/art/wheel-face.svg" alt=""><span data-i18n="p1.t">Spin the wheel</span></button><button type="button" data-go="1"><img src="/assets/apps/picki-land/art/dartboard.svg" alt=""><span data-i18n="p2.t">Throw a dart</span></button><button type="button" data-go="2"><img src="/assets/apps/picki-land/art/box.svg" alt=""><span data-i18n="p3.t">Lottery box</span></button><button type="button" data-go="3"><img src="/assets/apps/picki-land/art/drum-front.svg" alt=""><span data-i18n="p4.t">Lottery drum</span></button><button type="button" data-go="4"><i class="m-weights"><b></b><b></b><b></b></i><span data-i18n="p5.t">Weighted picks</span></button><button type="button" data-go="5"><img src="/assets/apps/picki-land/art/coin.svg" alt=""><span data-i18n="p6.t">Coin and dice</span></button><button type="button" data-go="6"><i class="m-number">42</i><span data-i18n="p7.t">Number card</span></button><button type="button" data-go="7"><i class="m-fingers"><b></b><b></b><b></b></i><span data-i18n="p8.t">Finger draw</span></button></div>
+    </div>
+
+    <div class="carousel reveal" style="--d:.15s" data-carousel aria-roledescription="carousel" aria-label="Picki Land features">
+      <div class="slides">
+        <figure class="slide is-active">
+          <div class="stage" aria-hidden="true">
+            <div class="pl-wheel"><img class="pl-wheel-face" data-l10n-art="/assets/apps/picki-land/art/wheel-face" src="/assets/apps/picki-land/art/wheel-face.svg" alt=""><img class="pl-wheel-hub" src="/assets/apps/picki-land/art/wheel-hub.svg" alt=""></div>
+            <img class="pop fufu-r" src="/assets/apps/picki-land/fufu-wave.png" alt="" width="420" height="420">
+            <div class="chip pl-result" data-i18n="pl.ramen">Ramen!</div>
+          </div>
+          <figcaption><strong data-i18n="p1.t">Spin the wheel</strong><span data-i18n="p1.d">Fill a pool with options and give the wheel a spin.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stage" aria-hidden="true">
+            <div class="pl-board"><img class="pl-board-face" data-l10n-art="/assets/apps/picki-land/art/dartboard" src="/assets/apps/picki-land/art/dartboard.svg" alt="">
+              <img class="pl-dart d1" src="/assets/apps/picki-land/art/dart.svg" alt=""><img class="pl-dart d2" src="/assets/apps/picki-land/art/dart.svg" alt=""></div>
+            <img class="pop fufu-l" src="/assets/apps/picki-land/fufu-happy.png" alt="" width="300" height="300">
+          </div>
+          <figcaption><strong data-i18n="p2.t">Throw a dart</strong><span data-i18n="p2.d">Flick a dart at the turning board and see which option it hits.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stage" aria-hidden="true">
+            <div class="pl-box"><div class="pl-ticket" data-i18n="pl.hotpot">Hot pot</div><img class="pl-box-art" src="/assets/apps/picki-land/art/box.svg" alt=""></div>
+            <img class="pop fufu-r small" src="/assets/apps/picki-land/fufu-happy.png" alt="" width="300" height="300">
+          </div>
+          <figcaption><strong data-i18n="p3.t">Lottery box</strong><span data-i18n="p3.d">Reach in and pull out a ticket. Turn on no-repeat to draw each one once.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stage" aria-hidden="true">
+            <div class="pl-drum-wrap"><div class="pl-drum"><img class="pl-drum-stand" src="/assets/apps/picki-land/art/drum-stand.svg" alt="" width="350" height="364"><img class="pl-drum-back" src="/assets/apps/picki-land/art/drum-back.svg" alt="" width="300" height="300"><img class="pl-drum-front" src="/assets/apps/picki-land/art/drum-front.svg" alt="" width="300" height="300"><img class="pl-ball" src="/assets/apps/picki-land/art/ball.svg" alt="" width="26" height="30"></div></div>
+            <img class="pop fufu-r small" src="/assets/apps/picki-land/fufu-wave.png" alt="" width="420" height="420">
+          </div>
+          <figcaption><strong data-i18n="p4.t">Lottery drum</strong><span data-i18n="p4.d">Turn the handle and a ball rolls out of the drum.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stage" aria-hidden="true">
+            <div class="weights">
+              <div><span data-i18n="pl.ramen2">Ramen</span><b style="--w:80%"></b><em>×3</em></div>
+              <div><span data-i18n="pl.sushi">Sushi</span><b style="--w:50%"></b><em>×2</em></div>
+              <div><span data-i18n="pl.salad">Salad</span><b style="--w:22%"></b><em>×1</em></div>
+            </div>
+            <img class="pop fufu-r small" src="/assets/apps/picki-land/fufu-thinking.png" alt="" width="300" height="300">
+          </div>
+          <figcaption><strong data-i18n="p5.t">Weighted picks</strong><span data-i18n="p5.d">Give your favourites a bigger chance.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stage" aria-hidden="true">
+            <div class="pl-quick"><img class="pl-coin" src="/assets/apps/picki-land/art/coin.svg" alt=""><img class="pl-die a" src="/assets/apps/picki-land/art/die-5.svg" alt=""><img class="pl-die b" src="/assets/apps/picki-land/art/die-3.svg" alt=""></div>
+          </div>
+          <figcaption><strong data-i18n="p6.t">Coin and dice</strong><span data-i18n="p6.d">Toss a coin, or roll up to six dice at once.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stage" aria-hidden="true">
+            <div class="pl-number"><img src="/assets/apps/picki-land/art/number-card.svg" alt=""><div class="pl-digits"><div class="pl-strip"><span>17</span><span>85</span><span>3</span><span>66</span><span>29</span><span>91</span><span>8</span><span>54</span><span>42</span></div></div></div>
+            <img class="pop fufu-l" src="/assets/apps/picki-land/fufu-thinking.png" alt="" width="300" height="300">
+            <div class="chip pop c-tr">1 – 100</div>
+          </div>
+          <figcaption><strong data-i18n="p7.t">Number card</strong><span data-i18n="p7.d">Set a range and roll a random number.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stage" aria-hidden="true">
+            <div class="fingers"><span></span><span></span><span class="win"></span><span></span></div>
+            <div class="chip pop c-br" data-i18n="chip.first">You go first! ✨</div>
+          </div>
+          <figcaption><strong data-i18n="p8.t">Finger draw</strong><span data-i18n="p8.d">Everyone puts a finger on the screen, and one gets picked.</span></figcaption>
+        </figure>
+      </div>
+      <div class="dots" role="tablist"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ThingKeep ========== -->
+<section id="thingkeep" class="app app-thing">
+  <div class="deco" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="app-inner">
+    <div class="app-copy">
+      <div class="app-head reveal">
+        <img class="app-icon app-icon-bunny" src="/assets/apps/thing-keep/bunny-wave.png" alt="" width="72" height="72">
+        <div>
+          <h2 class="app-name" data-i18n="name.thing">ThingKeep</h2>
+          <p class="app-sub"><span class="alt-name" data-alt="thing"></span><span data-i18n="thing.tag">Life tracker</span></p>
+        </div>
+      </div>
+      <p class="app-lede reveal" data-i18n="thing.lede" style="--d:.1s">How long have you used that toothbrush? How many classes are left on your pass? Did you pack everything? A bunny friend keeps track of the little things and gives you a gentle nudge when it’s time.</p>
+      <ul class="feats reveal" style="--d:.15s"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3.2 3L15 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="thing.f1">Track how long, how much is left, packing lists and habits</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3.2 3L15 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="thing.f2">Gentle reminders before things run out</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3.2 3L15 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="thing.f3">Share with family over iCloud</span></li></ul>
+      <div class="app-actions reveal" style="--d:.2s">
+        <span class="store-btn is-soon" data-i18n="thing.soon">Coming soon</span>
+      </div>
+    </div>
+
+    <div class="carousel reveal" style="--d:.15s" data-carousel aria-roledescription="carousel" aria-label="ThingKeep features">
+      <div class="slides">
+        <figure class="slide is-active">
+          <div class="stage" aria-hidden="true">
+            <div class="tk-card center">
+              <div class="ring" style="--p:.72"><span>62<small data-i18n="tk.days">days</small></span></div>
+              <div><span class="tk-kicker" data-i18n="tk.used.k">How long used</span><strong data-i18n="tk.used.n">Toothbrush</strong><span class="tk-note" data-i18n="tk.used.note">Swap it in 28 days</span></div>
+            </div>
+            <img class="pop bunny-r" src="/assets/apps/thing-keep/bunny-wave.png" alt="" width="420" height="400">
+          </div>
+          <figcaption><strong data-i18n="t1.t">How long used</strong><span data-i18n="t1.d">See how long you've had something, and when it's time for a new one.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stage" aria-hidden="true">
+            <div class="tk-card center col right">
+              <span class="tk-kicker" data-i18n="tk.left.k">How much left</span><strong data-i18n="tk.left.n">Swim class</strong>
+              <div class="bar"><i style="--w:40%"></i></div>
+              <span class="tk-note" data-i18n="tk.left.note">4 of 10 left</span>
+            </div>
+            <img class="pop bunny-l" src="/assets/apps/thing-keep/bunny-piggy.png" alt="" width="300" height="285">
+          </div>
+          <figcaption><strong data-i18n="t2.t">How much left</strong><span data-i18n="t2.d">Class passes, savings and instalments, all counted for you.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stage" aria-hidden="true">
+            <div class="tk-card center col check">
+              <span class="tk-kicker" data-i18n="tk.pack.k">Packed it all?</span>
+              <label><i class="on"></i><span data-i18n="tk.pack.1">Passport</span></label><label><i class="on"></i><span data-i18n="tk.pack.2">Charger</span></label><label><i></i><span data-i18n="tk.pack.3">Sunscreen</span></label>
+            </div>
+            <img class="pop bunny-r" src="/assets/apps/thing-keep/bunny-checklist.png" alt="" width="300" height="236">
+          </div>
+          <figcaption><strong data-i18n="t3.t">Packed it all?</strong><span data-i18n="t3.d">Reusable checklists for trips, the gym or heading out.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stage" aria-hidden="true">
+            <div class="tk-card center col mid">
+              <span class="tk-kicker" data-i18n="tk.habit.k">Did it?</span><strong data-i18n="tk.habit.n">Workout</strong>
+              <div class="week"><i class="on"></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i></div>
+              <span class="tk-note" data-i18n="tk.habit.note">3 days this week</span>
+            </div>
+          </div>
+          <figcaption><strong data-i18n="t4.t">Little habits</strong><span data-i18n="t4.d">Tick off the small things and watch your streak grow.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stage" aria-hidden="true">
+            <div class="notif pop"><b data-i18n="name.thing">ThingKeep</b><span data-i18n="tk.notif">Time for a new toothbrush 🪥</span></div>
+            <img class="pop bunny-l" src="/assets/apps/thing-keep/bunny-calendar.png" alt="" width="300" height="262">
+          </div>
+          <figcaption><strong data-i18n="t5.t">Gentle reminders</strong><span data-i18n="t5.d">A soft nudge before something runs out or is due.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stage" aria-hidden="true">
+            <div class="tk-card center col mid">
+              <span class="tk-kicker" data-i18n="tk.share.k">Shared with family</span><strong data-i18n="tk.share.n">Pet food</strong>
+              <div class="avatars"><span>🐻</span><span>🐰</span><span>🐱</span></div>
+              <span class="tk-note" data-i18n="tk.share.note">Synced with iCloud</span>
+            </div>
+          </div>
+          <figcaption><strong data-i18n="t6.t">Share with family</strong><span data-i18n="t6.d">Keep track together, synced over iCloud.</span></figcaption>
+        </figure>
+      </div>
+      <div class="dots" role="tablist"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer reveal">
+  <a class="footer-logo" href="#top"><img src="/assets/brand/logo.png" alt="Mochi Cubby" width="900" height="591"></a>
+  <nav class="footer-links" aria-label="Footer">
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="/privacy/" data-i18n="nav.privacy">Privacy Policy</a>
+    <a href="mailto:mochicubby.support@gmail.com" data-i18n="nav.contact">Contact us</a>
+  </nav>
+  <p class="footer-meta"><span data-i18n="footer.contact">Contact:</span> <a href="mailto:mochicubby.support@gmail.com">mochicubby.support@gmail.com</a></p>
+  <p class="footer-meta"><span data-i18n="footer.updated">Last updated:</span> <time datetime="2026-11-24">November 24, 2026</time> · © 2026 Mochi Cubby</p>
+  <label class="lang-pick">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+    <span class="sr-only" data-i18n="footer.lang">Language</span>
+    <select id="lang-select"></select>
+  </label>
+</footer>
+
+<script src="/assets/i18n.js" defer></script>
+<script src="/assets/home.js" defer></script>
+</body>
+</html>

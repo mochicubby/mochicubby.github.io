@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -4 236 180"><defs><clipPath id="o"><path d="M10.43 11.78Q18 0 32.00 0.00L202.00 0.00Q216 0 216.00 14.00L216.00 118.00Q216 132 208.43 143.78L205.57 148.22Q198 160 184.00 160.00L14.00 160.00Q0 160 0.00 146.00L0.00 42.00Q0 28 7.57 16.22Z"/></clipPath><clipPath id="f"><rect x="-200" y="28" width="398" height="400"/></clipPath>
+<linearGradient id="g" x1="0" y1="28" x2="0" y2="160" gradientUnits="userSpaceOnUse"><stop stop-color="#E4D3B6"/><stop offset="1" stop-color="#CDB997"/></linearGradient>
+<radialGradient id="sh"><stop stop-color="#38493F" stop-opacity=".16"/><stop offset="1" stop-color="#38493F" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="108.0" cy="156" rx="118" ry="16" fill="url(#sh)"/>
+<g clip-path="url(#o)"><path d="M10.43 11.78Q18 0 32.00 0.00L202.00 0.00Q216 0 216.00 14.00L216.00 118.00Q216 132 208.43 143.78L205.57 148.22Q198 160 184.00 160.00L14.00 160.00Q0 160 0.00 146.00L0.00 42.00Q0 28 7.57 16.22Z" fill="#C2AD89"/><path d="M-160 28L-160 -160L318.86 -160L198 28Z" fill="#EBDDC4"/><rect x="-200" y="28" width="398" height="400" fill="url(#g)"/>
+<g clip-path="url(#f)"><g transform="translate(99.0 94.0) scale(0.8580)" opacity="0.12"><path transform="rotate(-26)" d="M -34 62 V -22 A 46 46 0 1 1 12 24 H -34" fill="none" stroke="#38493F" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+<ellipse cx="108.0" cy="13.0" rx="68.0" ry="9.0" fill="#F3E8D2"/><ellipse cx="108.0" cy="14.0" rx="62.0" ry="7.0" fill="#8F7E5F"/></g></svg>
